@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <!-- <script src="app.js"></script> -->
+    <script>
+    </script>
+  </head>
+  <body>
+    <p id="mojId"></p>
+    <p>Jedan</p>
+    <p>Dva</p>
+    <p>Tri</p>
+
+    <p class="mojaKlasa">Ovo je klasa</p>
+    <script>
+      document.getElementById("mojId").innerHTML = "Dodata recenica iz JS.";
+      document.getElementById("mojId").style.backgroundColor="yellow";
+
+      document.getElementsByTagName("p")[1].style.border="1px solid red";
+
+      document.getElementsByClassName("mojaKlasa")[0].style.color="blue";
+
+      document.querySelector(".mojaKlasa").style.backgroundColor="red"
+    </script>
+  </body>
+</html>
