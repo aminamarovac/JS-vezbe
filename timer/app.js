@@ -40,3 +40,4 @@ function updateTimer() {
 }
 
 var timer = setInterval(updateTimer, 1000);
+setTimeout(proveriOdgovor,1000)

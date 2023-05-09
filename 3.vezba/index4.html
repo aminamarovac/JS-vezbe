@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var osoba={
+      //     godine:23,
+      //     prosekOcena:10,
+      //     slusaNaVezbama:true,
+      // }
+
+      var automobil1 = {
+        marka: "Mercedes",
+        godiste: 2020,
+      };
+
+      var automobil2 = {
+        marka: "BMW",
+        godiste: 2007,
+      };
+
+      var niz = [];
+      niz.push(automobil1);
+      niz.push(automobil2);
+
+      var sortiranNiz = niz.sort(function (a, b) {
+        return b.godiste - a.godiste;
+      });
+
+      for (let i = 0; i < sortiraniNiz.length; i++) {
+        document.write(sortiranNiz[i].marka + "<br>");
+      }
+    </script>
+  </body>
+</html>

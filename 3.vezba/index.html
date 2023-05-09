@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Regipsi</title>
+</head>
+<body>
+    <script>
+        var text="amina@gmail.com"
+
+        var uzorak=/^\w*[\.-]?\w{2,4}@(\w*\.\w*)$/gim;
+        
+        var rezultat=text.match(uzorak);
+        // document.write("Rezultat je : " + rezultat);
+
+        if(rezultat!=null)
+            alert("Email adresa je ispravna.");
+            else{
+                alert("Pokusajte ponovo.");
+            }
+            document.write(rezultat);  
+
+// Regips proverava da li se u textu nalazi sledece:text nakon kojeg dolazi tacka ili
+// posle ide min2 max4 karaktera popraceni znakom @ i treba da prihvati samo ako ima text.com
+
+
+// (za kol)da uhvatimo iz nekog inputa,zadamo id i uhv atimo value i proverimo jel tacno
+// regiops,dom,objektno orijentisano programiranje
+
+
+
+
+
+
+    </script>
+</body>
+</html>
