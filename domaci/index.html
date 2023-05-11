@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function domaci() {
+        let url = prompt("Unesite URL: ");
+        let regex = /^https?:\/\/w{3}\.[a-z]+\.[a-z]{2,4}$/;
+        if (regex.test(url)) {
+          document.write(
+            "<p style='color:green'>Ispravno uneta URL adresa.</p>"
+            );
+        } else {
+          document.write("<p style='color:red'>Greška u unosu.</p>");
+        }
+      }
+      domaci();
+    </script>
+  </body>
+</html>
