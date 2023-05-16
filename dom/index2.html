@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="glavniDiv2">
+      <button onclick="dodaj('DA')">YES!</button>
+      <button onclick="dodaj('NE')">NO!</button>
+      <button onclick="dodaj('MAYBE')">MAYBE!</button>
+    </div>
+    <p>Da li izlazite na kolokvijum?</p>
+    <script>
+      function dodaj(rec) {
+        var noviText = document.createTextNode;
+        var paragraf = document.querySelector("p");
+        paragraf.innerHTML += rec;
+      }
+      dugme.addEventListener("click", dodajZadatak);
+    </script>
+  </body>
+</html>

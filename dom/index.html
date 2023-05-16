@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="glavniDiv">
+      <label for="">TO DO LISTA</label>
+      <input type="text" id="zadatak" />
+      <button onclick="dodajZadatak()">Prosledi</button>
+    </div>
+    <script>
+      var inputEl = document.querySelector("input");
+      var dugme = document.querySelector("button");
+      var ulElement = document.createElement("ul");
+      var glavniDiv = document.getElementById("glavniDiv");
+
+
+      glavniDiv.appendChild(ulElement);
+
+      function dodajZadatak() {
+        var vrednostZadatka = inputEl.value;
+        var liElement = document.createElement("li");
+        liElement.textContent = vrednostZadatka;
+        ulElement.appendChild(liElement);
+        inputEl.value = "";
+      }
+      dugme.addEventListener("click",dodajZadatak);
+      
+    </script>
+  </body>
+</html>

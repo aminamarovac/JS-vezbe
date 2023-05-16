@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="glavniDiv">
+    </div>
+    <script>
+      var prof1 = {
+        ime: "Amina",
+        prezime: "Marovac",
+        godine: 19,
+        naziv: "Matematika",
+        urlSlike: "slika.jpg",
+      };
+      var prof2 = {
+        ime: "Amina",
+        prezime: "Marovac",
+        godine: 19,
+        naziv: "Matematika",
+        urlSlike: "slika.jpg",
+      };
+
+      function prikazi(profesor) {
+        var divZaPrikaz = document.getElementById("glavniDiv");
+        var slika = document.createElement("img");
+        slika.src = prof1.urlSlike;
+        var ulElem = document.createElement("ul");
+        var liElement1 = document.createElement("li");
+        var liElement2 = document.createElement("li");
+        var liElement3 = document.createElement("li");
+        var liElement4 = document.createElement("li");
+        var liElement5 = document.createElement("li");
+
+        var dugme = document.createElement("button");
+
+        ulElem.appendChild(liElement1);
+
+        ulElem.appendChild(liElement2);
+
+        ulElem.appendChild(liElement3);
+
+        ulElem.appendChild(liElement4);
+
+        ulElem.appendChild(liElement5);
+
+        liElement1.innerHTML = "Ime je:" + profesor.ime;
+        liElement2.innerHTML = "Prezime je:" + profesor.prezime;
+        liElement3.innerHTML = " Godine staza:" + godine.godine;
+        liElement4.innerHTML = "Naziv predmeta:" + profesor.naziv;
+
+        divZaPrikaz.appendChild(ulElem);
+      }
+      prikazi(prof2);
+    </script>
+  </body>
+</html>
