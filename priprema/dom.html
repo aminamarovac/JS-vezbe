@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="dom.js" defer></script> -->
+    <title>Document</title>
+    <script>
+      function Saberi() {
+        var br1 = document.mojaForma.x.value - 0;
+        var br2 = document.mojaForma.y.value - 0;
+        var ukupno = br1 + br2;
+        document.mojaForma.zbir.value = ukupno;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- <p style="color: indigo;">Element dodat pomocu taga.</p>
+    <p style="color:red">Drugi paragraf</p>
+    <p  id="treci" style="color: green; border: 2px solid black;">Treci</p>
+    <p>Cetvrti</p>
+    <p class="ok" style="color: aquamarine; background-color: antiquewhite;">Peti</p>
+    <h3 style="color: blue;">Prvi h3 el</h3>
+    <h3 style="color: rebeccapurple;">Drugi</h3>
+    <button>Prvo</button>
+    <button>Drugo</button> -->
+    <form method="post" name="mojaForma">
+      <label for="">x=</label>
+      <input type="text" name="x" /><br /><br />
+      <label for="">y=</label>
+      <input type="text" name="y" /><br /><br />
+      <input type="button" value="Saberi" onclick="Saberi()" /><br /><br />
+      <label for="text">Rezultat:</label><br /><br />
+      <input type="button" name="zbir" size="5" />
+    </form>
+
+    <h1>DIGITRON</h1>
+    <form name="digitron">
+      <label for="">Unesite prvi broj:</label><br />
+      <input type="text" name="br1" value="" /><br />
+      <label for="">Unesite drugi broj:</label><br />
+      <input type="text" name="br2" value="" /><br />
+      <input type="button" value="+" name="saberi" />
+      <input type="button" value="-" name="oduzmi" />
+      <input type="button" value="*" name="mnozi"  />
+      <input type="button" value="/" name="deli" 
+      /><br>
+      <label for="">Rezultat</label><br /><br>
+      <input type="button" />
+    </form>
+  </body>
+</html>
