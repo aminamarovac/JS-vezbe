@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function Izracunaj(operacija) {
+      var broj1 = parseInt(document.forma.br1.value);
+      var broj2=parseInt(document.forma.br2.value);
+      var rezultat=0;
+    //   alert (document.forma.br1.value.length);
+      if((isNaN(broj1)==false  && isNaN(broj2)==false)){
+        switch(operacija){
+            case 1:
+                rezultat=broj1+broj2;
+                break;
+                case 2:
+                rezultat=broj1-broj2;
+                break;
+                case 3:
+                rezultat=broj1*broj2;
+                break;
+                case 4:
+                rezultat=broj1/broj2;
+                break;
+        }
+        document.forma.rez.value=rezultat;
+      }else{
+        document.write("Mora biti unet broj");
+      }
+
+
+    }
+    Izracunaj()
+  </script>
+
+  <body>
+    <form name="forma">
+      <h1>DIGITRON</h1>
+      <label for="">Unesite prvi broj</label><br />
+      <input type="text" name="br1" /><br />
+      <label for="">Unesite drugi broj</label><br />
+      <input type="text" name="br2" /><br />
+      <input type="button" name="Saberi" value="+" onclick="Izracunaj(1)" />
+      <input type="button" name="Oduzmi" value="-" onclick="Izracunaj(2)" />
+      <input type="button" name="Mnozi" value="*"  onclick="Izracunaj(3)"/>
+      <input type="button" name="Deli" value="/"  onclick="Izracunaj(4)"/><br />
+      <label for="">Rezultat</label><br>
+      <input type="text" name="rez" value/>
+    </form>
+  </body>
+</html>
