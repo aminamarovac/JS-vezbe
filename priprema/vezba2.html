@@ -7,49 +7,46 @@
     <title>Document</title>
   </head>
   <script>
-    function Izracunaj(operacija) {
-      var broj1 = parseInt(document.forma.br1.value);
-      var broj2=parseInt(document.forma.br2.value);
-      var rezultat=0;
-    //   alert (document.forma.br1.value.length);
-      if((isNaN(broj1)==false  && isNaN(broj2)==false)){
-        switch(operacija){
-            case 1:
-                rezultat=broj1+broj2;
-                break;
-                case 2:
-                rezultat=broj1-broj2;
-                break;
-                case 3:
-                rezultat=broj1*broj2;
-                break;
-                case 4:
-                rezultat=broj1/broj2;
-                break;
+    function Digitron(operacija) {
+      var broj1 = parseInt(document.mojaForma.br1.value);
+      var broj2 = parseInt(document.mojaForma.br2.value);
+      var rezultat = 0;
+      if (isNaN(broj1) == false && isNaN(broj2) == false) {
+        switch (operacija) {
+          case 1:
+            rezultat = broj1 + broj2;
+            break;
+          case 2:
+            rezultat = broj1 - broj2;
+            break;
+          case 3:
+            rezultat = broj1 * broj2;
+            break;
+          case 4:
+            rezultat = broj1 / broj2;
+            break;
         }
-        document.forma.rez.value=rezultat;
-      }else{
-        document.write("Mora biti unet broj");
+        document.mojaForma.rez.value = rezultat;
+      } else {
+        alert("Morate uneti brojeve");
       }
-
-
     }
-    Izracunaj()
+    Digitron();
   </script>
 
   <body>
-    <form name="forma">
-      <h1>DIGITRON</h1>
-      <label for="">Unesite prvi broj</label><br />
-      <input type="text" name="br1" /><br />
-      <label for="">Unesite drugi broj</label><br />
-      <input type="text" name="br2" /><br />
-      <input type="button" name="Saberi" value="+" onclick="Izracunaj(1)" />
-      <input type="button" name="Oduzmi" value="-" onclick="Izracunaj(2)" />
-      <input type="button" name="Mnozi" value="*"  onclick="Izracunaj(3)"/>
-      <input type="button" name="Deli" value="/"  onclick="Izracunaj(4)"/><br />
-      <label for="">Rezultat</label><br>
-      <input type="text" name="rez" value/>
+    <h1>DIGITRON</h1>
+    <form name="mojaForma">
+      <label for="">Unesite prvi broj:</label><br />
+      <input type="text" name="br1" value /><br />
+      <label for="">Unesite drugi broj:</label><br />
+      <input type="text" name="br2" value /><br />
+      <input type="button" value="+" name="Saberi" onclick="Digitron(1)" />
+      <input type="button" value="-" name="Oduzmi" onclick="Digitron(2)" />
+      <input type="button" value="*" name="Mnozi" onclick="Digitron(3)" />
+      <input type="button" value="/" name="Deli" onclick="Digitron(4)" /><br />
+      <label for="">Rezultat:</label><br />
+      <input type="button" value="" name="rez" onclick="Digitron()" />
     </form>
   </body>
 </html>

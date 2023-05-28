@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function Ocene() {
+      var ocena=0;
+      let inp = document.forma.bodovi.value;
+      if (inp >= 0 && inp <= 100) {
+        switch (true) {
+          case inp < 51:
+            ocena = 5;
+            break;
+          case inp < 61:
+            ocena = 6;
+            break;
+          case inp < 71:
+            ocena = 7;
+            break;
+          case inp < 81:
+            ocena = 8;
+            break;
+          case inp < 91:
+            ocena = 9;
+            break;
+          case inp < 100:
+            ocena = 10;
+            break;
+        }
+        document.forma.prosledi.value = ocena;
+      } else {
+        alert("pokusajte ponovo");
+      }
+    }
+
+    Ocene()
+  </script>
+  <body>
+    <form name="forma">
+      <label for="">Unesite broj bodova:</label><br /><br />
+      <input type="text" name="bodovi" placeholder="Unesi poene od 0 do 100" />
+      <input type="button" value="Prosledi" name="prosledi" onclick="Ocene()"/>
+    </form>
+  </body>
+</html>

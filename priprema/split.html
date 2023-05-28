@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function Prosek() {
+      let unos = prompt("Unesite ocene,izmedju treba da bude zarez");
+      let niz = unos.split(",");
+      let n = niz.length;
+      var i,
+        brojOcena = 0;
+      suma = 0;
+      for (let i = 0; i < n; i++) {
+        console.log(niz[i]);
+        if (niz[i] > 5 && niz[i] < 10) {
+          suma += Number(niz[i]);
+          brojOcena++;
+        }
+        suma = suma / brojOcena;
+      }
+      return suma;
+    }
+    document.write("Prosek ocena je" + Prosek());
+  </script>
+  <body></body>
+</html>
