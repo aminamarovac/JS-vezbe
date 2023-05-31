@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      var nizCitata = new Array(4);
+      var nizAutora = new Array(4);
+      nizCitata[0] = "Kako malo maste imamo za bol koju nanosimo drugima.";
+      nizAutora[0] = "K.M.";
+      nizCitata[1] = "Put do uspeha je trnvit,ali su mu plodovi slatki.";
+      nizAutora[1] = "N.A.";
+      nizAutora[2] = "O sreci se cuti.";
+      nizCitata[2] = "A.H.";
+      nizCitata[3] = "Ne trosi se previse na druge,zafalices sebi.";
+      nizAutora[3] = "L.A.";
+      index = Math.floor(Math.random() * nizCitata.length);
+      document.write("<ul>");
+      document.write("<li>" + nizCitata[index]);
+      document.write("<li>" + nizAutora[index]);
+      document.write("</ul>")
+    </script>
+  </body>
+</html>

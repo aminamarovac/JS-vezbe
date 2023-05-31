@@ -8,23 +8,22 @@
   </head>
   <script>
     function Prosek() {
-      let unos = prompt("Unesite ocene,izmedju treba da bude zarez");
-      let niz = unos.split(",");
-      let n = niz.length;
-      var i,
-        brojOcena = 0;
-      suma = 0;
-      for (let i = 0; i < n; i++) {
+      var ocene = prompt("Unesite ocene sa zarezom");
+      var niz = ocene.split(",");
+      var n = niz.length;
+      var i, brojOcena=0 ,
+      suma=0;
+      for (i = 0; i < n; i++) {
         console.log(niz[i]);
-        if (niz[i] > 5 && niz[i] < 10) {
-          suma += Number(niz[i]);
-          brojOcena++;
-        }
-        suma = suma / brojOcena;
-      }
+      
+      if (niz[i] > 5 && niz[i] <= 10) 
+      suma+=Number(niz[i])
+      brojOcena++;
+    }
+    suma = suma / brojOcena;
       return suma;
     }
-    document.write("Prosek ocena je" + Prosek());
+    document.write("Niz ocena je " + Prosek());
   </script>
   <body></body>
 </html>
