@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function poruka() {
+      alert("okkkkkkkkkkkkkkkk");
+    }
+    var imena = prompt("UNesite niz imena za sortiranje:");
+    var brojevi = prompt("Unesite niz brojeva za sortiranje:");
+    ispisImena(imena);
+    ispisBrojeva(brojevi);
+
+    function ispisImena(imena) {
+      let niz = imena.split(" ");
+      var n = niz.length;
+      document.write("Uneli ste " + n + "imena" + "Sortirana imena su:");
+      var sNiz = niz.sort();
+      document.write(sNiz.join("."));
+      document.write("<br>");
+    }
+
+    function ispisBrojeva(brojevi) {
+      let niz = brojevi.split(" ");
+      var n = niz.length;
+      document.write("Uneli ste " + n + "broja" + "Sortirani brojevi su:");
+      var sNiz = niz.sort(function (a, b) {
+        return a - b;
+      });
+    }
+    document.write(sNiz.join("."));
+    document.write("<br>");
+  </script>
+  <body onload="poruka()"></body>
+</html>
