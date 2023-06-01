@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="prikaziVreme()">
+    <div id="vreme"></div>
+    <script>
+      function prikaziVreme() {
+        let date = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let vreme = h + ":" + m + ":" + s;
+        document.getElementById("vreme").innerHTML = vreme;
+
+        setTimeout(prikaziVreme, 1000);
+      }
+
+      var datum = new Date();
+      var mesec = datum.getMonth();
+      window.alert("Mesec je" + meseci(mesec) + "broj dana" + brojDana(mesec));
+
+      function meseci(mesec) {
+        var niz = [
+          "Januar",
+          "Februar",
+          "Mart",
+          "April",
+          "Maj",
+          "Jun",
+          "Jul",
+          "Avgust",
+          "Septembar",
+          "Oktobar",
+          "Novembar",
+          "Decembar",
+        ];
+        return niz[mesec];
+      }
+
+      function brojDana(mesec) {
+        var niz = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30];
+        return niz[mesec];
+      }
+    </script>
+  </body>
+</html>
