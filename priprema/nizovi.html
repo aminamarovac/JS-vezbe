@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let imena=prompt("Unesite imena:");
+    let nizImena=imena.split(" ");
+    let n=nizImena.length;
+    document.write("Imena su " + imena + "ukupno ste uneli " +n + "imena");
+    nizImena.pop();
+    document.write(nizImena);
+    let nizImena2=imena.split(" ");
+    nizImena2.splice(2,1);
+    document.write(nizImena2)
+
+    let objekat1={
+        ime:"Amina",
+        prezime:"Marovac"
+    };
+
+    let objekat2={
+        ime:"Amina",
+        prezime:"Besirovic"
+    }
+
+    let nizObjekata=[];
+    nizObjekata.push(objekat1);
+    nizObjekata.push(objekat2);
+    var sortiran=nizObjekata.sort(function(a,b){
+        return b.prezime-a.prezime;
+    });
+    for(i=0;i<nizObjekata.length;i++){
+        document.write(sortiran[i].ime + sortiran[i].prezime);
+    }
+</script>
+<body>
+    
+</body>
+</html>

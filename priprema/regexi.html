@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let trazenaRec=/Script/;
+    let index="JavaScript je programski jezik".search(trazenaRec);
+    document.write(index);
+    let uzorak=/2\d\d\d/g;
+    let text="1980-ol 1931 1970 1997-ol 2002 1997 1889 1899 1997" + "2008-ol 2008";
+    rezultat=text.match(uzorak);
+    document.write(rezultat)
+function proveri(){
+    var uzorak=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var text=prompt("Unesite email za proveru:");
+    var rezultat=text.match(uzorak);
+    if(rezultat!=null){
+        alert("Uneli ste ispravan mejl");
+    }else{
+        alert ("Uneli ste pogresan mejl");
+    }
+}
+proveri();
+
+</script>
+<body>
+    
+</body>
+</html>
