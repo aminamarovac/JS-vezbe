@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kartice studenata</title>
+    <style>
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 200px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container"></div>
+
+    <script>
+      // Niz objekata sa informacijama o studentima
+      const students = [
+        {
+          imePrezime: "Marko Marković",
+          brojIndeksa: "12345",
+          slika: "putanja/do/slike1.jpg",
+          godinaStudija: 3,
+        },
+        {
+          imePrezime: "Jovana Jovanović",
+          brojIndeksa: "67890",
+          slika: "putanja/do/slike2.jpg",
+          godinaStudija: 2,
+        },
+        {
+          imePrezime: "Ana Anić",
+          brojIndeksa: "54321",
+          slika: "putanja/do/slike3.jpg",
+          godinaStudija: 4,
+        },
+        {
+          imePrezime: "Petar Petrović",
+          brojIndeksa: "98765",
+          slika: "putanja/do/slike4.jpg",
+          godinaStudija: 1,
+        },
+      ];
+
+      // Kreiranje kartica za svakog studenta
+      // const cardContainer = document.querySelector(".card-container");
+
+      // students.forEach(student => {
+      //   const card = document.createElement("div");
+      //   card.className = "card";
+
+      //   const image = document.createElement("img");
+      //   image.src = student.slika;
+      //   card.appendChild(image);
+
+      //   const name = document.createElement("p");
+      //   name.textContent = "Ime i prezime: " + student.imePrezime;
+      //   card.appendChild(name);
+
+      //   const index = document.createElement("p");
+      //   index.textContent = "Broj indeksa: " + student.brojIndeksa;
+      //   card.appendChild(index);
+
+      //   const year = document.createElement("p");
+      //   year.textContent = "Godina studija: " + student.godinaStudija;
+      //   card.appendChild(year);
+
+      //   cardContainer.appendChild(card);
+      // });
+
+      const cardContainer = document.querySelector(".card-container");
+      students.forEach((student) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const image = document.createElement("img");
+        image.src = student.slika;
+        card.appendChild(image);
+
+        const name = document.createElement("p");
+        name.textContent = "Ime i prezime" + student.imePrezime;
+
+        const index = document.createElement("p");
+        index.textContent = "Index" + student.index;
+
+        const year = document.createElement("p");
+        year.textContent = "Godina" + student.godina;
+
+        cardContainer.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img {
+            width: 150px;
+        }
+        
+        #divZaPrikaz {
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgb(198, 198, 198);
+            gap:1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .unutrasnjiDiv {
+            display: flex;
+            width: 30%;
+            height: 150px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divZaPrikaz">
+    </div>
+    <script>
+
+        function prikazi(idDivaZaPrikaz, prof) {
+            var divSpoljasnji = document.getElementById(idDivaZaPrikaz);
+            var ul = document.createElement("ul");
+            var li1 = document.createElement("li");
+            var li2 = document.createElement("li");
+            var li3 = document.createElement("li");
+            var li4 = document.createElement("li");
+            var li5 = document.createElement("li");
+
+            var dugme = document.createElement("button");
+            dugme.addEventListener("click", function(){
+                alert("Uspesno!") //anonymous funkcija
+            })
+
+            dugme.innerHTML = "Prosledi"
+
+            li1.innerHTML = "Ime je: " + prof.ime;
+            li2.innerHTML = "Prezime je: " + prof.prezime;
+            li3.innerHTML = "Godine radnog staza: " + prof.godine;
+            li4.innerHTML = "Naziv predmeta: " + prof.predmet;
+            li5.appendChild(dugme);
+
+            var div2 = document.createElement("div");
+            div2.classList = "unutrasnjiDiv";
+            var img = document.createElement("img");
+            img.src = prof.fotografija;
+
+            div2.appendChild(img);
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            ul.appendChild(li3);
+            ul.appendChild(li4);
+            ul.appendChild(li5);
+            div2.appendChild(ul);
+            divSpoljasnji.appendChild(div2);
+        }
+    
+
+        var prof1 = {
+            ime: "Emina",
+            prezime: "Omerovic",
+            godine: 32,
+            fotografija: "matematika.jpg",
+            predmet: "Matematika"
+        };
+
+        
+        var prof2 = {
+            ime: "Alen",
+            prezime: "Alic",
+            godine: 28,
+            fotografija: "books.jpg",
+            predmet: "Srpski jezik"
+        };
+
+        var prof3 = {
+            ime: "Marija",
+            prezime: "Milosavljevic",
+            godine: 38,
+            fotografija: "geografija.jpg",
+            predmet: "Geografija"
+        };
+
+        var prof4 = {
+            ime: "Irfan",
+            prezime: "Aljovic",
+            godine: 38,
+            fotografija: "likovno.jpg",
+            predmet: "Likovno"
+        };
+
+        prikazi("divZaPrikaz", prof1);
+        prikazi("divZaPrikaz", prof2);
+        prikazi("divZaPrikaz", prof3);
+        prikazi("divZaPrikaz", prof4);
+    </script>
+</body>
+
+</html>

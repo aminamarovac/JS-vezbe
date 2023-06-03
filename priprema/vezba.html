@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function proveriVreme(){
+        var uzorak=/^([1-2][0-9]|[1-9] | [0] [1-9] | [3][0-1])\.([0][1-9] | [1-9] | [][0-2])\.([0-9]{4})\.$/;
+        if(provera.test(date)){
+            var niz=date.split(".");
+            var dan=parseInt(niz[0-10]);
+            var mesec=parseInt(niz[1-10]);
+            var godina=parseInt(niz[2-10]);
+            if(mesec==2){
+                if((godina%4==0 && godina%100!=0) || godina%400==0){
+                    if(dan>29){
+                        return false;
+                    }else if (dan>28){
+                        return false
+                    }else{
+                        if(dan>30 && mesec==4 || mesec==6 || mesec==9 || mesec==11){
+                            return false
+                        }
+                        return true
+
+                    }
+                }else{
+                    return false;
+                }
+            }
+        }
+
+    }
+</script>
+<body>
+    <!-- Napisati zadatak koji proverava da li je uneseni format datuma ispravan.
+Obuhvatiti sve moguce formate koje korisnik moze uneti, koji obuhvataju i slucajeve kada se unese nula 
+ispred jednocifrenog broja, npr.
+01.05.2020.
+01.5.2020.
+1.5.2020.
+1.05.2020.
+kao i ostale, gde je u pitanju dvocifren mesec ili dan
+31.12.2020. i slicno.
+
+Proveriti i da li je unos vremena ispravan.-->
+</body>
+</html>

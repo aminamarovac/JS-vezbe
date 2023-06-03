@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="glavniDiv2">
+    <!-- <div class="glavniDiv2">
       <button onclick="dodaj('DA')">YES!</button>
       <button onclick="dodaj('NE')">NO!</button>
       <button onclick="dodaj('MAYBE')">MAYBE!</button>
@@ -20,6 +20,22 @@
         paragraf.innerHTML += rec;
       }
       dugme.addEventListener("click", dodajZadatak);
+    </script> -->
+
+    <div id="glavni">
+      <button onclick="dodaj('DA')">YES</button>
+      <button onclick="dodaj('NE')">NO</button>
+      <button onclick="dodaj('MAYBE')">MAYBE</button>
+    </div>
+    <p>Da li izlazite na kol</p>
+    <script>
+      function dodaj(rec){
+        var noviTextText=document.createTextNode;
+        var paragraf=document.querySelector("p");
+        paragraf.innerHTML+=rec;
+      }
+      button.addEventListener("click",dodaj)
+
     </script>
   </body>
 </html>

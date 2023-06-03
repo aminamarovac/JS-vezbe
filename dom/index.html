@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="glavniDiv">
+    <!-- <div id="glavniDiv">
       <label for="">TO DO LISTA</label>
       <input type="text" id="zadatak" />
       <button onclick="dodajZadatak()">Prosledi</button>
@@ -18,16 +18,35 @@
       var ulElement = document.createElement("ul");
       var glavniDiv = document.getElementById("glavniDiv");
 
-      glavniDiv.appendChild(ulElement);
-
-      function dodajZadatak() {
+      glavniDiv.appendChild(ulElement); -->
+      <!-- function dodajZadatak() {
         var vrednostZadatka = inputEl.value;
         var liElement = document.createElement("li");
         liElement.textContent = vrednostZadatka;
         ulElement.appendChild(liElement);
         inputEl.value = "";
       }
-      dugme.addEventListener("click", dodajZadatak);
-    </script>
+      dugme.addEventListener("click", dodajZadatak); -->
+
+      <div id="glavni">
+     <input type="text">To do
+      <button onclick="zadatak()">Prosledi</button>
+    </div>
+    
+  <script>
+    var inputEl=document.querySelector("input");
+    var buttonEl=document.querySelector("button");
+    var glavni=document.getElementById("glavni");
+    var ulEl=document.createElement("ul");
+    glavni.appendChild(ulEl);
+    function zadatak(){
+      var vrednost=inputEl.value;
+      var liEl=document.createElement("li");
+      liEl.textContent=vrednost
+      ulEl.appendChild(liEl);
+      inputEl.value=" ";
+    }
+    buttonEl.addEventListener("clik",zadatak)
+  </script>
   </body>
 </html>

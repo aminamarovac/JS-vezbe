@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let uzorak = /HTML/g;
+    let text = "HTML JE LAK.HTML se uci brzo";
+    let rezultat = text.replace(uzorak, "JAVA");
+    document.write(rezultat);
+
+    function proveri() {
+      var tel = /^\d{10}|\d{3}-\d{3}-\d{4}|(\d{3}-\d{3}-\d{4})$/;
+      var text = prompt("Unesite broj telefona:");
+      if (tel.test(text)) {
+        var rez = text.match(/\d+/g);
+        if (rez != null) {
+          alert("Format je ispravan");
+        } else {
+          alert("nije ispravan");
+        }
+      }
+    }
+
+    proveri();
+    function email(){
+      var validationInput=document.getElementById("validationInput").value;
+      var validationMessage=document.getElementById("validationMessage");
+//       Kreirati input polje tipa text. Korišćenjem regularnih izraza (regex-a) u JavaScriptu ispitati da li je
+// sadržaj koji je korisnik uneo u to input polje u sledećem formatu:
+// Email sadrži proizvoljan broj karaktera nakon kojih mora doći donja crta ili srednja crta ili tačka,
+// a nakon koje slede 2 karaktera i brojevi 1 i 9 (1 je obavezan, 9 moze, a ne mora doci). Nakon njih
+// dolazi znak @, praćen proizvoljnim brojem karaktera, pa tackom, nakon koje moze doci
+// proizvoljan broj karaktera, pa tacka, pa mora doci najmanje 2, a najvise 4 karaktera.
+// (npr. emina-al1@gmail.com ili emina.al19@hotmail.com ili emina_al1@np.ac.rs itd).
+// Ukoliko uneti sadržaj zadovoljava ove kriterijume, potrebno je da se ispod input polja unutar p
+// taga zelenim slovima ispisuje „Ispravno unet email“, u suprotnom je potrebno da crvenim
+// slovima na istom mestu ispiše „Greška u unosu.“ */
+var regex=/^{a-Za-Z0-9}+([-_.][a-Za-Z0-9]+){1}9?@[a-Za-Z]+\.[a-Za-Z]\.{1-3}$/
+if(regex.test(validationInput)){
+  validationMessage.innerHTML="ispravan";
+
+}else{
+  validationMessage.innerHTML="pogresan";
+}
+    }
+var validaionInput=document.getElementById("validationInput")
+    validationInput.addEventListener("input",email)
+  </script>
+  <body>
+    <input type="text" id="validationInput">
+    <p id="validationMessage"></p>
+  </body>
+</html>

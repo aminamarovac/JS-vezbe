@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <!-- gornja skripta omogucava preuzimanje fajla -->
+            <script src="app.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>TEXT EDITOR</h1>
+            </div>
+        </header>
+        <div>
+            <button onclick="bolduj()">Bold</button>
+            <button onclick="italic()">Italic</button>
+            <button onclick="poravnajLevo()">Left</button>
+            <button onclick="poravnajCentralno()">Center</button>
+            <button onclick="poravnajDesno()">Right</button>
+            <button onclick="velikaSlova()">UpperCase</button>
+            <button onclick="malaSlova()">LowerCase</button>
+            <button onclick="prvaVelikaSlova()">Capitalize</button>
+            <button onclick="obrisi()" class="obrisiBtn">Obrisi</button>
+        </div>
+        <div>
+            <textarea name="" id="tekstUnutarEditora" cols="100" rows="30"></textarea>
+        </div>
+        <div>
+            <button class="preuzmiBtn" onclick="saveAsWord()">Preuzmi</button>
+        </div>
+
+    </body>
+</html>
