@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="regexi.js"></script>
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <style></style>
+    <input type="text" id="emailInput" />
+    <p id="validationMessage"></p>
+
+    <script>
+      function validateEmail() {
+        var emailInput = document.getElementById("emailInput").value;
+        var validationMessage = document.getElementById("validationMessage");
+
+        // Regex za validaciju email adrese
+        // /^\w+([_-.]\w+)*[1]9?@\w+(\.\w+){1,3}$/;
+        var regex =
+          //   /^\w+([-_.]\w+)*[1]9?@\w+(\.\w+){1,3}$/;
+
+          //   Kreirati input polje tipa text.Napisati regularni izraz u JavaScriptu koji ce proveriti
+          // da li je zadati string jaka lozinka.Lozinka treba da sadrzi najmanje 8 karaktera,od kojih barem jedno veliko slovo
+          // (bilo gde u reci),jedno malo slovo(bilo gde u reci),najmanje 2,a najvise 3 cifre i jedan specijalni karakter
+          // (koji moze,a ne mora doci).
+          /^([a-z]?)([A-Z]?)(\d{2,3})?.([!@])?.{8,}$/;
+
+        /* User
+      // Kreirati input polje tipa text. Korišćenjem regularnih izraza (regex-a) u JavaScriptu ispitati da li je
+      // sadržaj koji je korisnik uneo u to input polje u sledećem formatu:
+      // Email sadrži proizvoljan broj karaktera nakon kojih mora doći donja crta ili srednja crta ili tačka,
+      // a nakon koje slede 2 karaktera i brojevi 1 i 9 (1 je obavezan, 9 moze, a ne mora doci). Nakon njih
+      // dolazi znak @, praćen proizvoljnim brojem karaktera, pa tackom, nakon koje moze doci
+      // proizvoljan broj karaktera, pa tacka, pa mora doci najmanje 2, a najvise 4 karaktera.
+      // (npr. emina-al1@gmail.com ili emina.al19@hotmail.com ili emina_al1@np.ac.rs itd).
+      // Ukoliko uneti sadržaj zadovoljava ove kriterijume, potrebno je da se ispod input polja unutar p
+      // taga zelenim slovima ispisuje „Ispravno unet email“, u suprotnom je potrebno da crvenim
+      // slovima na istom mestu ispiše „Greška u unosu.“ */
+
+        if (regex.test(emailInput)) {
+          validationMessage.innerHTML = "Ispravno unet email";
+          validationMessage.style.color = "green";
+        } else {
+          validationMessage.innerHTML = "Greška u unosu.";
+          validationMessage.style.color = "red";
+        }
+      }
+
+      var emailInput = document.getElementById("emailInput");
+      emailInput.addEventListener("input", validateEmail);
+    </script>
+  </body>
 </html>
