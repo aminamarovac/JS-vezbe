@@ -30,6 +30,38 @@
     <div id="divZaPrikaz">
     </div>
     <script>
+             var prof1 = {
+            ime: "Emina",
+            prezime: "Omerovic",
+            godine: 32,
+            fotografija: "matematika.jpg",
+            predmet: "Matematika"
+        };
+
+        
+        var prof2 = {
+            ime: "Alen",
+            prezime: "Alic",
+            godine: 28,
+            fotografija: "books.jpg",
+            predmet: "Srpski jezik"
+        };
+
+        var prof3 = {
+            ime: "Marija",
+            prezime: "Milosavljevic",
+            godine: 38,
+            fotografija: "geografija.jpg",
+            predmet: "Geografija"
+        };
+
+        var prof4 = {
+            ime: "Irfan",
+            prezime: "Aljovic",
+            godine: 38,
+            fotografija: "likovno.jpg",
+            predmet: "Likovno"
+        };
 
         function prikazi(idDivaZaPrikaz, prof) {
             var divSpoljasnji = document.getElementById(idDivaZaPrikaz);
@@ -69,38 +101,7 @@
         }
     
 
-        var prof1 = {
-            ime: "Emina",
-            prezime: "Omerovic",
-            godine: 32,
-            fotografija: "matematika.jpg",
-            predmet: "Matematika"
-        };
-
-        
-        var prof2 = {
-            ime: "Alen",
-            prezime: "Alic",
-            godine: 28,
-            fotografija: "books.jpg",
-            predmet: "Srpski jezik"
-        };
-
-        var prof3 = {
-            ime: "Marija",
-            prezime: "Milosavljevic",
-            godine: 38,
-            fotografija: "geografija.jpg",
-            predmet: "Geografija"
-        };
-
-        var prof4 = {
-            ime: "Irfan",
-            prezime: "Aljovic",
-            godine: 38,
-            fotografija: "likovno.jpg",
-            predmet: "Likovno"
-        };
+   
 
         prikazi("divZaPrikaz", prof1);
         prikazi("divZaPrikaz", prof2);
