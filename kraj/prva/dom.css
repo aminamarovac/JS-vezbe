@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#app{
+    margin: 50px auto;
+    width: 700px;
+    background-color: antiquewhite;
+    height: 200px;
+    padding: 50px;
+   
+}
+
+label{
+    margin: 10px;
+}
+
+input{
+    margin: 10px;
+}
+
+button{
+    margin: 10px;
+}
