@@ -42,7 +42,8 @@ proveri();
 
 function regexx(){
     var emailInput=document.getElementById("emailInput").value;
-    var validationMessage=document.getElementById("validationMessage");
+    var validationMessage=document.getElementById("validationMessage");  
+    
     var rec=/^\w+([_-.]\w+)*[1]9?@\w+(\.\w+){1,3}$/;
     if(rec.test(emailInput)){
         validationMessage.innerHTML="ispravno";

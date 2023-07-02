@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="emailInput" />
+    <p id="validationMessage"></p>
+    <script>
+      function provera() {
+        var emailInput = document.getElementById("emailInput").value;
+        var validationMessage = document.getElementById("validationMessage");
+        var uzorak = /^[A-Z][a-zA-Z]?([_]).([0-9]*).\w+.pdf$/;
+        if (uzorak.test(emailInput)) {
+          validationMessage.innerHTML = "ispravan";
+          validationMessage.style.color = "green";
+        } else {
+          validationMessage.innerHTML = "pogresan";
+          validationMessage.style.color = "red";
+        }
+      }
+
+      var emailInput = document.getElementById("emailInput");
+      emailInput.addEventListener("input", provera);
+    </script>
+  </body>
+</html>
