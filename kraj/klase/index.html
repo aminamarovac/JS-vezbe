@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+    constructor(i="Amina",p="Marovac",brI=8877){
+        this.ime=i;
+        this.prezime=p;
+        this.brojindeksa=brI;
+        this.ocene=[]
+    }
+
+    predstaviSe(){
+        document.write("Moje ime je : " + this.ime + "a prezime:" + this.prezime);
+    };
+
+    prosek(){
+        let n=this.ocene.length;
+        let s=o;
+        for(i=o;i<n.length;i++){
+            s+=Number(this.ocene[i]);
+        }
+        return s/n;
+    }
+};
+
+var student=new Student();
+student.predstaviSe();
+
+var student1=new Student("Amina","Besirovic",5);
+student1.predstaviSe();
+
+var student2=new Student("Amina","Marovac",7);
+var text=prompt("Unesite ocene:");
+var niz=text.split(" ");
+student2.ocene=niz;
+student2.predstaviSe();
+document.write(student2.ime + "ima prosek" + student2.prosek());
+    </script>
+   
+</body>
+</html>

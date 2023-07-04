@@ -1,0 +1,20 @@
+#divZaPrikaz{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.unutrasnji{
+    display: flex;
+    width: 30%;
+    height: 150px;
+    border: 2px solid black;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 30%;
+}
